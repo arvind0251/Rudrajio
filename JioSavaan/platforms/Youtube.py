@@ -11,10 +11,6 @@ from youtubesearchpython.__future__ import VideosSearch
 
 from JioSavaan.utils.database import is_on_off
 from JioSavaan.utils.formatters import time_to_seconds
-
-
-
-import os
 import glob
 import random
 import logging
@@ -29,8 +25,6 @@ def cookie_txt_file():
     with open(filename, 'a') as file:
         file.write(f'Choosen File : {cookie_txt_file}\n')
     return f"""cookies/{str(cookie_txt_file).split("/")[-1]}"""
-
-
 
 async def check_file_size(link):
     async def get_format_info(link):
@@ -412,4 +406,4 @@ class YouTubeAPI:
         else:
             direct = True
             downloaded_file = await loop.run_in_executor(None, audio_dl)
-        return downloaded_file, direct
+        return downloaded_file, directded_file, direc
